@@ -32,6 +32,9 @@ export default function ticketReducer(state, action) {
 
         case "CLEAR_EDITING_TICKET":
             return { ...state, editingTicket: null };
+
+        case "SET_SORT_PREFERENCE":
+            return { ...state, sortPreference: action.payload };
         default:
             return state;
     }
